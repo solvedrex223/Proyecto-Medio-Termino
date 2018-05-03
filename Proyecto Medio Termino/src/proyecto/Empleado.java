@@ -40,6 +40,7 @@ public class Empleado {
 	public void setDireccion(String a) {
 		this.Direccion = a;
 	}
+	@SuppressWarnings("unused")
 	public void setRFC(String a) {
 		char l1 = this.ApellidoPaterno.charAt(0);
 		char l2 = 'a';
@@ -70,23 +71,23 @@ public class Empleado {
 		}
 		char l3 = this.ApellidoMaterno.charAt(0);
 		char l4 = this.Nombre.charAt(0);
-		char l5 = Integer.toString(this.Fecha.YEAR).charAt(2);
-		char l6 = Integer.toString(this.Fecha.YEAR).charAt(3);
-		if (this.Fecha.MONTH + 1 < 10) {
+		char l5 = Integer.toString(Calendar.YEAR).charAt(2);
+		char l6 = Integer.toString(Calendar.YEAR).charAt(3);
+		if (Calendar.MONTH + 1 < 10) {
 			 l7 = '0';
-			 l8 = Integer.toString(this.Fecha.MONTH).charAt(0);
+			 l8 = Integer.toString(Calendar.MONTH).charAt(0);
 		}
 		else {
-			 l7 = Integer.toString(this.Fecha.MONTH).charAt(0);
-			 l8 = Integer.toString(this.Fecha.MONTH).charAt(1);
+			 l7 = Integer.toString(Calendar.MONTH).charAt(0);
+			 l8 = Integer.toString(Calendar.MONTH).charAt(1);
 		}
-		if (this.Fecha.DAY_OF_MONTH < 10) {
+		if (Calendar.DAY_OF_MONTH < 10) {
 			 l9 = '0';
-			 l10 = Integer.toString(this.Fecha.DAY_OF_MONTH).charAt(0);
+			 l10 = Integer.toString(Calendar.DAY_OF_MONTH).charAt(0);
 		}
 		else {
-			 l9 = Integer.toString(this.Fecha.DAY_OF_MONTH).charAt(0);
-			 l10 = Integer.toString(this.Fecha.DAY_OF_MONTH).charAt(1);
+			 l9 = Integer.toString(Calendar.DAY_OF_MONTH).charAt(0);
+			 l10 = Integer.toString(Calendar.DAY_OF_MONTH).charAt(1);
 		}
 			
 		char [] RFC = a.substring(0,9).toCharArray();
